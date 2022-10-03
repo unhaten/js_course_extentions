@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 10px;
+    font-size: 32px;
+    font-family: "Ms Madi", cursive;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 2.5em;
+    border: 2px solid green;
+    box-sizing: border-box;
+}
+
+button {
+    color: white;
+    background-color: green;
+    padding: 10px 25px;
+    border: none;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+li a {
+    text-decoration: none;
+    color: green;
+}
