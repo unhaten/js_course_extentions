@@ -3,6 +3,8 @@ const inputBtn = document.getElementById("input-btn");
 const inputEl = document.getElementById("input-el");
 const ulEl = document.getElementById("ul-el");
 
+localStorage.setItem("myLeads", "vk.com");
+
 inputBtn.addEventListener("click", function () {
     myLeads.push(inputEl.value);
     renderLeads();
