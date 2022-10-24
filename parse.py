@@ -2,12 +2,18 @@ import requests
 from bs4 import BeautifulSoup as BS
 import soupsieve as sv
 
-r = requests.get("https://russian.rt.com/business")
+r = requests.get("https://russian.rt.com/business/news")
 
-html = BS(r.content, 'lxml')
+html = BS(r.text, 'lxml')
 
-for el in sv.select(".layout a[class='link > link_color']", html):
-    print(el)
+all_links = html.find_all('a', class_='link link_color')
+print(all_links)
+for link in all_links:
+    # print(f'{link['href']} --- {link.text}')
+    print('https://russian.rt.com' + link['href'] + ' ---------- ' + link.text)
+
+# for el in sv.select(".layout a[class='link > link_color']", html):
+#     print(el)
     # title = el.select(".caption caption-bold > a")
     # print(title[0].text)
     # print(title)
